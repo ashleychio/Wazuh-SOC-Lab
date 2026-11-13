@@ -14,6 +14,7 @@ An on-premise Security Operations Center (SOC) home lab built using **Wazuh SIEM
 | **[IR-001](reports/IR-001-FIM-File-Modification.md)** | File Creation & Modification | Windows VM | Wazuh FIM (`syscheck`), Rules `554` & `550` |
 | **[IR-002](reports/IR-002-Guest-Account-Enabled.md)** | Built-in Guest Account Enabled | Windows VM | Custom XML Rule, Windows Event ID '4722' |
 | **[IR-003](reports/IR-003-Linux-SSH-BruteForce.md)** | Repeated Failed SSH Logins & Automated Block | Linux VM | Custom XML Rule `100101` (`5760`), Active Response (`firewall-drop`) |
+| **[IR-004](reports/IR-004-Windows-Privilege-Escalation.md)** | Failed Local Privilege Escalation (`runas`) | Windows VM | Windows Security Event ID `4625` | 
 
 ## Repository Structure
 * `/reports/` – Structured Incident Response reports with timelines, log telemetry, and remediation notes.
