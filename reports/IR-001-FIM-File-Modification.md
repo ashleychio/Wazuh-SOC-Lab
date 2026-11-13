@@ -9,7 +9,7 @@
 ## 1. Executive Summary
 On November 12, 2026, Wazuh File Integrity Monitoring (FIM) detected the creation and subsequent modification of a text file (`payrolldata.txt`) inside the monitored `C:\CompanyData` directory on the Windows endpoint. Investigation confirmed the activity was performed by an authorised user (`AChio`) during normal operational hours and posed no threat to the environment.
 
-![IR-001 Wazuh FIM Log](../screenshots/IR-001/IR-001-payroll-file.png)
+![IR-001 Payroll-file](../screenshots/IR-001/IR-001-payroll-file.png)
 
 
 ## 2. Detection Configuration
@@ -27,7 +27,7 @@ Real-time File Integrity Monitoring (`syscheck`) was configured in the Windows W
 
 2026-11-12 10:43:46 - c:\companydata\payrolldata.txt was edited and saved
 
-![IR-001 Wazuh FIM Log](../screenshots/IR-001/IR-001-Wazuh-Log.png)
+![IR-001 Wazuh-FIM-Log](../screenshots/IR-001/IR-001-Wazuh-Log.png)
 
 ## 4. Telemetry & Log Findings:
 Rules Triggered:
@@ -38,9 +38,9 @@ User Account: AChio
 
 Target File Path: c:\companydata\payrolldata.txt
 
-![IR-001 Wazuh FIM Log](../screenshots/IR-001/IR-001-File-Added-Log.png)
+![IR-001 Wazuh-FIM-Added-Log](../screenshots/IR-001/IR-001-File-Added-Log.png)
 
-![IR-001 Wazuh FIM Log](../screenshots/IR-001/IR-001-File-Modified-Log.png)
+![IR-001 Wazu-FIM-Modified-Log](../screenshots/IR-001/IR-001-File-Modified-Log.png)
 
 ## 5. Remediation & Key Learnings:
 Resolution: Confirmed that AChio is an authorised user and verified the file modification was a legitimate activity. No containment or rollback actions were required.
