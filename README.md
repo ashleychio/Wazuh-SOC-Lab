@@ -5,8 +5,8 @@ An on-premise Security Operations Center (SOC) home lab built using **Wazuh SIEM
 ## Lab Architecture
 * **SIEM / XDR:** Wazuh Manager, Indexer, and Dashboard
 * **Endpoints Monitored:** 
-  * Windows VM 
-  * Linux VM
+  * Windows (10 Pro) VM 
+  * Linux (Ubuntu) VM
 
 ## Incident Investigation Reports
 | Report ID | Scenario | Target Endpoint | Key Detections & Tools |
