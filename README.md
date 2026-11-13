@@ -12,7 +12,7 @@ An on-premise Security Operations Center (SOC) home lab built using **Wazuh SIEM
 | Report ID | Scenario | Target Endpoint | Key Detections & Tools |
 | :--- | :--- | :--- | :--- | 
 | **[IR-001](reports/IR-001-FIM-File-Modification.md)** | File Creation & Modification | Windows VM | Wazuh FIM (`syscheck`), Rules `554` & `550` |
-| **[IR-002](reports/IR-002-Guest-Account-Enabled)** | Built-in Guest Account Enabled | Windows VM | Custom XML Rule, Windows Event ID '4722' |
+| **[IR-002](reports/IR-002-Guest-Account-Enabled.md)** | Built-in Guest Account Enabled | Windows VM | Custom XML Rule, Windows Event ID '4722' |
 
 
 ## Repository Structure
