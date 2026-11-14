@@ -31,7 +31,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.124.132 ssh
 * **Target User:** Admin
 * **Times Rule Fired:** 343
 
-![IR-006-Wazuh-Log-Detail](../screenshots/IR-006/Ir-006-Wazuh-Log-Detail.png)
+![IR-006-Wazuh-Log-Detail](../screenshots/IR-006/Ir-006-Wazuh-Log-Details.png)
 
 ## 5. Remediation & Key Learnings
 * **Resolution:** Verified that the brute-force traffic originated from the authorized internal Kali Linux VM during a controlled red/blue team exercise. No accounts were compromised as root/SSH passwords were secure.
