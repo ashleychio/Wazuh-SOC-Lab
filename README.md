@@ -18,6 +18,7 @@ An on-premise Security Operations Center (SOC) home lab built using **Wazuh SIEM
 | **[IR-004](reports/IR-004-Windows-Privilege-Escalation.md)** | Failed Local Privilege Escalation | Windows VM | Windows Security Event ID `4625` | 
 | **[IR-005](reports/IR-005-Nmap-Port-Scanning.md)** | Network Reconnaissance & Port Scanning (`nmap`)| Windows VM | Windows Sysmon Event ID 3 |
 | **[IR-006](reports/IR-006-SSH-Brute-Force.md)** | Automated SSH Brute Force Attack (`Hydra`) | Linux VM | Wazuh Rule `5710` |
+| **[IR-007](reports/IR-007-Web-Directory-Enumeration.md)** | Web Application Reconnaissance (`Gobuster`) | Linux VM (Apache) | Wazuh Rule `31151`, Apache Access Logs (`T1595.003`) |
 
 ## Repository Structure
 * `/reports/` – Structured Incident Response reports with timelines, log telemetry, and remediation notes.
