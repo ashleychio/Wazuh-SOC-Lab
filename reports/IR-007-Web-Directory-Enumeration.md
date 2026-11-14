@@ -10,17 +10,24 @@
 On November 13, 2026, Wazuh detected an automated web application reconnaissance attack targeting the Apache web server hosted on the internal Linux virtual machine. The Wazuh Manager aggregated and correlated the rapid sequence of HTTP 400-level errors from a single external IP address. Investigation confirmed that the activity was performed from the Kali Linux VM using the `gobuster` directory enumeration tool with the `common.txt` wordlist. This simulation demonstrates successful SIEM visibility into web server error log ingestion and MITRE ATT&CK **T1595.003 (Active Scanning: Wordlist Scanning)**.
 
 ## 2. Detection Configuration
+To set up the web target for testing, Apache2 was installed on the internal Linux virtual machine to host a local website:
+![IR-007-LinuxApache2](../screenshots/IR-007/IR-007-LinuxApache2.png)
+
 To monitor web application traffic, the Linux endpoint's Wazuh agent (`ossec.conf`) was configured to ingest Apache access logs in real time:
+![IR-007-ApacheLog](../screenshots/IR-007/IR-007-ApacheLog.png)
 
 To simulate discovery, a directory scan was executed from Kali against the target web server:
 ```bash
 gobuster dir -u [http://192.168.124.132](http://192.168.124.132) -w /usr/share/wordlists/dirb/common.txt
 ```
+![IR-007-KaliCommand](../screenshots/IR-007/IR-007-KaliCommand.png)
 
 ## 3. Timeline of Events
 - **2026-11-13 22:06:42** – Kali Linux initiated the `gobuster` directory scan targeting the Apache web server on `192.168.124.132`.
 - **2026-11-13 22:06:46 - 22:06:47** – Apache access log recorded a high frequency of HTTP `404 Not Found` requests (`GET /xx HTTP/1.1`, `GET /xls HTTP/1.1`, etc.) originating from Kali IP `192.168.124.133` using User-Agent `gobuster/3.8.2`.
 - **2026-11-13 22:06:46 - 22:06:47** – Wazuh triggered Rule `31151` (*"Multiple web server 400 error codes from same source ip"*) after correlating the rapid burst of error codes.
+
+![IR-007-WazuhLogs](../screenshots/IR-007/IR-007-WazuhLogs.png)
 
 ## 4. Telemetry & Log Findings
 * **Wazuh Rule ID:** `31151` (Level 10)
@@ -28,6 +35,8 @@ gobuster dir -u [http://192.168.124.132](http://192.168.124.132) -w /usr/share/w
 * **Source Workstation:** Kali Linux VM
 * **Target Workstation:** Linux VM
 * **Times Rule Fired:** 141
+
+![IR-007-WazuhLogsDetails](../screenshots/IR-007/IR-007-WazuhLogDetail.png)
 
 ## 5. Remediation & Key Learnings
 * **Resolution:** Verified that the web enumeration scan originated from the authorised internal Kali Linux VM during a controlled lab exercise. No sensitive files or admin panels were exposed or compromised.
