@@ -14,13 +14,13 @@ To simulate and capture network reconnaissance telemetry, an Nmap service versio
 ```bash
 nmap -sV -p 21,22,80,125,445,3389 <Windows-VM-IP>
 ```
-![IR-005-Kali-Command](../screenshots/IR-005/IR-005-IR-005-KaliCommand.png)
+![IR-005-Kali-Command](../screenshots/IR-005/IR-005-KaliCommand.png)
 
 ## 3. Timeline of Events
 * **2026-11-13 18:42:48** – Kali Linux initiated the `nmap` scan targeting the Windows VM IP address.
 * **2026-11-13 18:42:52** – Windows Sysmon generated network connection events logged and ingested by Wazuh.
 
-![IR-005-Wazuh-Log](../screenshots/IR-005/IR-005-IR-005-WazuhLog.png)
+![IR-005-Wazuh-Log](../screenshots/IR-005/IR-005-WazuhLog.png)
 
 ## 4. Telemetry & Log Findings
 * **Technique:** Network Service Discovery (`T1046`)
@@ -29,7 +29,7 @@ nmap -sV -p 21,22,80,125,445,3389 <Windows-VM-IP>
 * **Sysmon Event ID:** 3
 * **Protocol:** TCP
 
-![IR-005-Wazuh-Log-Details](../screenshots/IR-005/IR-005-IR-005-WazuhLogDetails.png)
+![IR-005-Wazuh-Log-Details](../screenshots/IR-005/IR-005-WazuhLogDetails.png)
 
 ## 5. Remediation & Key Learnings
 * **Resolution:** Verified that the targeted port scan originated from the authorized internal Kali Linux VM during a controlled lab exercise. No exploitation attempt followed.
