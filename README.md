@@ -16,7 +16,8 @@ An on-premise Security Operations Center (SOC) home lab built using **Wazuh SIEM
 | **[IR-002](reports/IR-002-Guest-Account-Enabled.md)** | Built-in Guest Account Enabled | Windows VM | Custom XML Rule, Windows Event ID '4722' |
 | **[IR-003](reports/IR-003-Linux-SSH-BruteForce.md)** | Repeated Failed SSH Logins & Automated Block | Linux VM | Custom XML Rule, Rule `5760`, Active Response (`firewall-drop`) |
 | **[IR-004](reports/IR-004-Windows-Privilege-Escalation.md)** | Failed Local Privilege Escalation | Windows VM | Windows Security Event ID `4625` | 
-| **[IR-005](reports/IR-005-Nmap-Port-Scanning.md)** | Network Reconnaissance & Port Scanning | Windows VM | Windows Sysmon Event ID 3 |
+| **[IR-005](reports/IR-005-Nmap-Port-Scanning.md)** | Network Reconnaissance & Port Scanning (`nmap`)| Windows VM | Windows Sysmon Event ID 3 |
+| **[IR-006](reports/IR-006-SSH-Brute-Force.md)** | Automated SSH Brute Force Attack (`Hydra`) | Linux VM | Wazuh Rule `5710` |
 
 ## Repository Structure
 * `/reports/` – Structured Incident Response reports with timelines, log telemetry, and remediation notes.
