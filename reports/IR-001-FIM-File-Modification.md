@@ -3,7 +3,7 @@
 * **Title:** File Creation and Modification in Monitored Directory (`C:\CompanyData`)
 * **Date:** November 12, 2026
 * **Target Host:** Windows VM
-* **Status:** Closed - Benign Activity
+* **Status:** Closed - Benign Lab Simulation
 
 
 ## 1. Executive Summary
