@@ -3,7 +3,7 @@
 * **Title:** Failed Local Privilege Escalation Attempt (`runas /user:Administrator`)
 * **Date:** November 12, 2026
 * **Target Host:** Windows VM
-* **Status:** Closed - Benign Activity
+* **Status:** Closed - Benign Lab Simulation
 
 ## 1. Executive Summary
 On November 12, 2026, Wazuh detected a failed Windows authentication attempt targeting the built-in `Administrator` account on the Windows endpoint. Investigation confirmed that user `AChio` executed `runas /user:Administrator cmd` from a standard Command Prompt and entered an incorrect password during a controlled privilege escalation lab test. No unauthorised elevation occurred.
