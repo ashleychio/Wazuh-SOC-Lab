@@ -7,7 +7,6 @@ An on-premise Security Operations Center (SOC) home lab built using **Wazuh SIEM
 * **Endpoints Monitored:** 
   * Windows (10 Pro) VM 
   * Linux (Ubuntu) VM
-  * Kali Linux
 
 ## Incident Investigation Reports
 | Report ID | Scenario | Target Endpoint | Key Detections & Tools |
