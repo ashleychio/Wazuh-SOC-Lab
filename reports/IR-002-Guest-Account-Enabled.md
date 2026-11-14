@@ -3,7 +3,7 @@
 * **Title:** Built-in Guest Account Enabled
 * **Date:** November 12, 2026
 * **Target Host:** Windows VM
-* **Status:** Closed - Benign Activity
+* **Status:** Closed - Benign Lab Simulation
 
 ## 1. Executive Summary
 On November 12, 2026, Wazuh detected that the built-in `Guest` account was enabled on the Windows endpoint. Investigation confirmed that the account state change was performed by an authorised administrator (`AChio`) during normal operational hours as part of a controlled lab test, posing no threat to the environment.
