@@ -4,7 +4,7 @@
 * **Date:** November 12, 2026
 * **Target Host:** Linux VM
 * **Source Host:** Windows VM
-* **Status:** Closed – Benign Activity
+* **Status:** Closed – Benign Lab Simulation
 
 ## 1. Executive Summary
 On November 12, 2026, Wazuh detected three consecutive failed SSH login attempts targeting the Linux endpoint. Investigation confirmed that the connection attempts originated from the internal Windows VM and were performed by an authorized user (`AChio`) during a controlled lab test. Upon reaching the three-failure threshold, Wazuh Active Response automatically blocked the Windows VM's IP address via the local Linux firewall (`firewall-drop`), verified by continuous ICMP ping requests from the Windows host timing out.
