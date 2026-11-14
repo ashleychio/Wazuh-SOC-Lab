@@ -14,14 +14,14 @@ To simulate an active credential-access threat, an automated password dictionary
 ```bash
 hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.124.132 ssh
 ```
-![IR-006-Kali-Command](../screenshots/IR-006/IR-006-Command.png)
+![IR-006-Kali-Command](../screenshots/IR-006/Ir-006-Command.png)
 
 ## 3. Timeline of Events
 * **2026-11-13 21:56:05** – Kali Linux initiated the `hydra` SSH brute-force attack against the Linux target IP (`192.168.124.132`).
 * **2026-11-13 21:56:48** – Linux system journal logged a high frequency of authentication failures and invalid user attempts (`pam_unix(sshd:auth): check pass; user unknown` and `Failed password for invalid user admin`).
 * **2026-11-13 21:57:11** – Wazuh triggered Rule `5710` (*"Attempt to login using a non-existent user"*) after aggregating multiple rapid attempts from the source IP.
 
-![IR-006-Wazuh-Log](../screenshots/IR-006/IR-006-WazuhLog.png)
+![IR-006-Wazuh-Log](../screenshots/IR-006/Ir-006-WazuhLog.png)
 
 ## 4. Telemetry & Log Findings
 * **Wazuh Rule ID:** `5710` (Level 5)
@@ -31,7 +31,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.124.132 ssh
 * **Target User:** Admin
 * **Times Rule Fired:** 343
 
-![IR-006-Wazuh-Log-Detail](../screenshots/IR-006/IR-006-Wazuh-Log-Detail.png)
+![IR-006-Wazuh-Log-Detail](../screenshots/IR-006/Ir-006-Wazuh-Log-Detail.png)
 
 ## 5. Remediation & Key Learnings
 * **Resolution:** Verified that the brute-force traffic originated from the authorized internal Kali Linux VM during a controlled red/blue team exercise. No accounts were compromised as root/SSH passwords were secure.
